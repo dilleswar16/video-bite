@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Getting Started with Video Bite App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Lighthouse Report
+
+- This project's Lighthouse report was generated to evaluate its performance, accessibility, best practices, and SEO.
+- You can view the report by downloading the `[lighthouse_report pdf]` file in the repository.
+
 
 ### Usage
 
@@ -48,7 +54,7 @@ This project is a video player application with a playlist feature. It allows us
 - **Responsive Design:** The application is designed to be `responsive`, adjusting its layout and styles based on the `screen size`. This ensures a consistent user experience across different devices and screen sizes.
 - **Thumbnail Previews:** Each video in the playlist is represented by a `thumbnail image`, providing users with a visual preview of the video content.
 - **Search Functionality :** The  component includes a search input field for searching videos in the playlist.
-- ** Context API :**  The application uses the Context API `(MyContext.Provider`) to manage and share state between components, such as the mediaJSONdata and reordering value, without having to pass props manually through every level of the component tree`(Prop drilling)`.
+- **Context API :**  The application uses the Context API `(MyContext.Provider`) to manage and share state between components, such as the mediaJSONdata and reordering value, without having to pass props manually through every level of the component tree`(Prop drilling)`.
 
 
 
