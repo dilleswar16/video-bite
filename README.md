@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Lighthouse Report
 
 - This project's Lighthouse report was generated to evaluate its performance, accessibility, best practices, and SEO.
-- You can view the report by downloading the `[lighthouse_report pdf]` file in the repository.
+- You can view the report by downloading the `[lighthouse_report.pdf]` file in the repository.
 
 
 ### Usage
