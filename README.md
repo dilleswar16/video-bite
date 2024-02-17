@@ -2,69 +2,53 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Usage
 
-In the project directory, you can run:
+To run the project locally, clone the repository and install dependencies using npm or yarn. Then, start the development server:
 
-### `npm start`
+```bash
+npm install
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open http://localhost:3000 to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Project Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is a video player application with a playlist feature. It allows users to view a list of videos, play them, and reorder them using drag-and-drop functionality. The application also includes a search feature to filter videos in the playlist.
 
-### `npm run build`
+### Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **App Component (`App.js`):**
+   - Manages state using the `useState` hook for mediaJSONdata (Data for the video playlist)
+   - Provides a context (`MyContext.Provider`) for sharing state with child components.
+   - Renders a `Navbar` component and the `Playlist` component wrapped in the context provider.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Navbar Component (`components/Navbar.js`):**
+   - Displays a navigation bar with a logo and title (`Videobite`).
+   
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Playlist Component (`components/Playlist.js`):**
+   - Includes a search input field.
+   - Manages state for the current playing index, search term, and whether a video is clicked.
+   - Implements drag-and-drop reordering of videos in the playlist.
+   - Displays the playlist of videos with each item as a `PlayListItem` component.
+   - Renders a `ReactPlayer` component for video playback when a video is clicked.
 
-### `npm run eject`
+- **PlayListItem Component (`components/PlayListItem.js`):**
+   - Displays a thumbnail image of the video.
+   - Shows a play icon when hovered over.
+   - Uses the `video` prop to display video information (title, description).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Key Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Drag-and-Drop Functionality:** The `Playlist` component uses `react-beautiful-dnd` for drag-and-drop functionality, allowing users to reorder videos in the playlist by dragging and dropping them.
+- **Video Playback:** When a video is clicked in the `playlist`, the `ReactPlayer` component is rendered in the Playlist component to play the selected video. The player includes controls for playing, pausing, and seeking through the video.
+- **Responsive Design:** The application is designed to be `responsive`, adjusting its layout and styles based on the `screen size`. This ensures a consistent user experience across different devices and screen sizes.
+- **Thumbnail Previews:** Each video in the playlist is represented by a `thumbnail image`, providing users with a visual preview of the video content.
+- **Search Functionality :** The  component includes a search input field for searching videos in the playlist.
+- ** Context API :**  The application uses the Context API `(MyContext.Provider`) to manage and share state between components, such as the mediaJSONdata and reordering value, without having to pass props manually through every level of the component tree`(Prop drilling)`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
