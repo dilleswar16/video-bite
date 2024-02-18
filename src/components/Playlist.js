@@ -127,6 +127,7 @@ const Playlist = () => {
           <div className="w-3/4 mx-4 my-4">
             {isVideoClicked && filteredVideos.length === 0 &&  <p className="text-left text-gray-500 py-2 px-8 mx-8">No videos found</p>}
             <ReactPlayer
+              style={{position: 'sticky', top:"10%"}}
               width="100%"
               height={`${searchTerm === "" ?  "13%": "76.5vh"}`}
               url={filteredVideos[currentPlayingIndex] !== undefined ? filteredVideos[currentPlayingIndex].sources : ""}
